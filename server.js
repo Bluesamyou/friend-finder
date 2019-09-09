@@ -1,5 +1,6 @@
 const express = require('express')
-const api = routes('./routes/api')
+const api = require('./routes/api')
+const path = require('path')
 
 // initialise express
 const app = express()
@@ -10,12 +11,20 @@ const PORT = 3000 || process.env.PORT
 // setup middleware
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
-app.use('/api', api)
+// app.use('/api', api)
 
 
 // Create route for main page
 app.get('/', function (req, res) {
-    res.sendFile(path.join(__dirname + './pages/index.html'))
+    res.sendFile(path.join(__dirname + '/pages/index.html'))
+})
+
+app.get('/survey', function (req, res) {
+    res.sendFile(path.join(__dirname + '/pages/survey.html'))
+})
+
+app.get('/styles/styles.css', function (req, res) {
+    res.sendFile(path.join(__dirname + '/pages/styles/styles.css'))
 })
 
 

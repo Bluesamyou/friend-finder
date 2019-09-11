@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="../styles/styles.css">
+    <script src="https://kit.fontawesome.com/9f65caa2ad.js"></script>
     <title>Document</title>
 </head>
 
@@ -13,10 +14,20 @@
     <div class="survey-container">
         <h1>Survey Questions</h1>
         <h3>About you</h3>
-        <label for="Name">Name</label>
-        <input type="text" class="name">
+        <div class="input-container">
+            <label for="Name">Name</label>
+            <input type="text" class="name">
+            <label for="Name">Upload a photo</label>
+            <input type="file" name="pic" accept="image/*" class="image">
+            <button class="addImage" onclick="clicker()"><i class="fas fa-camera-retro"></i></button>
+        </div>
     </div>
+    <script>
+        function clicker() {
+            document.getElementsByClassName('image')[0].click()
+        }
 
+    </script>>
 </body>
 
 </html>

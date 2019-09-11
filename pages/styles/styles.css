@@ -47,14 +47,35 @@ padding: 30px;
 
 .survey-container{
     color: white;
-    width: 90%;
-    margin-left: 5%;
+    padding-left: 25px;
+    /* display: grid;
+    justify-content: center; 
+    align-items: center; */
 }
 
 .survey-container label{
-   display: block
+    font-size: 20px;
 }
 
 .survey-container input{
-    display: block
+    background : rgba(255,255,255,0.2);
+    border-radius: 25px; 
+    padding: 10px;
+    width: 20%;
+    border: none;
+    color: white;
+    font-size: 15px;
+    text-align: center;
+ }
+
+ .addImage{
+    background: orangered;
+    padding: 15px 15px;
+    border-radius: 25px;
+    color : white;
+    border: none;
+ }
+
+ .image{
+     display: none;
  }

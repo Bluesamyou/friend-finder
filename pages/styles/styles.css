@@ -66,11 +66,12 @@ padding: 30px;
     color: white;
     font-size: 15px;
     text-align: center;
+    margin-right: 30px;
  }
 
  .addImage{
     background: orangered;
-    padding: 15px 15px;
+    padding: 9px 10px;
     border-radius: 25px;
     color : white;
     border: none;

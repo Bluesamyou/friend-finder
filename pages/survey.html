@@ -21,13 +21,111 @@
             <input type="file" name="pic" accept="image/*" class="image">
             <button class="addImage" onclick="clicker()"><i class="fas fa-camera-retro"></i></button>
         </div>
+        <div class="score-container">
+            <div class="question">
+                <form action="/survey" method="POST">
+                    <h3>Question 1</h3>
+                    <p>Do you believe that communism will save us all?</p>
+                    <select name="question1" id="question-1">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                    <h3>Question 2</h3>
+                    <p>You prefer animals over children</p>
+                    <select name="question2" id="question-2">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                    <h3>Question 3</h3>
+                    <p>You would own a pet for the insta fame</p>
+                    <select name="question3" id="question-3">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                    <h3>Question 4</h3>
+                    <p>Heck you would forego any ethics for those likes</p>
+                    <select name="question4" id="question-4">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                    <h3>Question 5</h3>
+                    <p>Cereal before milk?</p>
+                    <select name="question5" id="question-5">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                    <h3>Question 6</h3>
+                    <p>While we are on that note, Pineapple on pizza?</p>
+                    <select name="question6" id="question-6">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                    <h3>Question 7</h3>
+                    <p>Ketchup adds a lot of flavour to food</p>
+                    <select name="question7" id="question-7">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                    <h3>Question 8</h3>
+                    <p>Ketchup adds a lot of flavour to food</p>
+                    <select name="question8" id="question-8">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                    <h3>Question 9</h3>
+                    <p>You like flume purely for his expermentational style over his one song with Tove Lo</p>
+                    <select name="question9" id="question-9">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                    <h3>Question 10</h3>
+                    <p>Kanye should host the AMAs</p>
+                    <select name="question10" id="question-10">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                    <button type="submit"></button>
+                </form>
+
+            </div>
+        </div>
     </div>
     <script>
         function clicker() {
             document.getElementsByClassName('image')[0].click()
         }
 
-    </script>>
+    </script>
 </body>
 
 </html>

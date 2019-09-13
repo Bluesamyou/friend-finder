@@ -80,3 +80,28 @@ padding: 30px;
  .image{
      display: none;
  }
+ 
+
+ select {
+     display: grid;
+     justify-content: center;
+     align-items: center;
+     background: rgba(255,255,2555,0.25);
+     border: none;
+     border-radius :25px;
+     color : white; 
+     width: 100px;
+     height: 20px;
+ }
+
+option {
+    padding : 20px;
+}
+
+button{
+    margin: 30px; 
+    padding: 10px 20px;
+    background: greenyellow;
+    border-radius: 25px;
+    border : none;
+}

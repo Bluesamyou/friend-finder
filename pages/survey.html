@@ -22,7 +22,7 @@
             <button class="addImage" onclick="clicker()"><i class="fas fa-camera-retro"></i></button>
         </div>
         <div class="score-container">
-            <div class="question">
+            <div class="questions">
                 <form>
                     <h3>Question 1</h3>
                     <p>Do you believe that communism will save us all?</p>
@@ -126,6 +126,13 @@
     <script>
         $('.submit-button').on('click', function (e) {
             e.preventDefault()
+
+            var postObj = {}
+            $('.question').each(function (index) {
+                postObj[$(this).attr("name")] = $(this).val()
+            })
+
+            console.log(postObj)
         })
 
 

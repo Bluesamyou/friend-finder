@@ -120,19 +120,41 @@
             </div>
         </div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+
+    <div class="modal-container">
+        <div class="modal">
+            <div class="modal-header">
+
+            </div>
+            <div class="modal-body">
+
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
 
     <script>
         $('.submit-button').on('click', function (e) {
             e.preventDefault()
 
             var postObj = {}
+
             $('.question').each(function (index) {
                 postObj[$(this).attr("name")] = $(this).val()
             })
 
-            console.log(postObj)
+            $.ajax({
+                method: "POST",
+                url: "api/friends",
+                data: postObj
+            })
+                .then(function (resp) {
+                    console.log(resp)
+                })
+
+
         })
 
 

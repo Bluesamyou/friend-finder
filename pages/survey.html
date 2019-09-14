@@ -88,7 +88,7 @@
                         <option value="5">5</option>
                     </select>
                     <h3>Question 8</h3>
-                    <p>Ketchup adds a lot of flavour to food</p>
+                    <p>You consider yourself an "influencer"</p>
                     <select name="question8" id="question-8" class="question">
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -121,41 +121,47 @@
         </div>
     </div>
 
-    <div class="modal-container">
-        <div class="modal">
-            <div class="modal-header">
-
-            </div>
-            <div class="modal-body">
-
-            </div>
-        </div>
-    </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.js"
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
     <script>
-        $('.submit-button').on('click', function (e) {
-            e.preventDefault()
+        $(document).ready(function () {
+            $('.modal-container').hide()
+            $('.submit-button').on('click', function (e) {
+                e.preventDefault()
 
-            var postObj = {}
+                var postObj = {}
 
-            $('.question').each(function (index) {
-                postObj[$(this).attr("name")] = $(this).val()
-            })
-
-            $.ajax({
-                method: "POST",
-                url: "api/friends",
-                data: postObj
-            })
-                .then(function (resp) {
-                    console.log(resp)
+                $('.question').each(function (index) {
+                    postObj[$(this).attr("name")] = $(this).val()
                 })
 
+                $.ajax({
+                    method: "POST",
+                    url: "api/friends",
+                    data: postObj
+                })
+                    .then(function (resp) {
 
+                        Swal.fire({
+                            title: `<strong>YOU MATCHED WITH ${resp.name.toUpperCase()}</strong>`,
+                            html:
+                                `<img src="${resp.image}" height="400" width="300">`,
+                            showCloseButton: true,
+                            showCancelButton: false,
+                            focusConfirm: false,
+                            confirmButtonText:
+                                'Close',
+                            confirmButtonAriaLabel: 'Close button',
+                        })
+                            .then(function (result) {
+                                window.location.reload()
+                            })
+                    })
+            })
         })
+
 
 
         function clicker() {
